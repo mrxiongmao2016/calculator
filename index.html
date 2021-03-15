@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #calculatorBox {
+            /* box-sizing: border-box; */
+            width: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .display {
+            width: 400px;
+            background-color: yellow;
+        }
+
+        .display .dpRow {
+            height: 100px;
+            width: auto;
+            border: 1px solid black;
+            font-size: 30px;
+            text-align: right;
+            line-height: 100px;
+        }
+
+        .keyboard {
+            width: 400px;
+            background: red;
+        }
+
+        .kbRow {
+            width: auto;
+            list-style: none;
+            background-color: green;
+            overflow: hidden;
+            /* 解决浮动高度塌陷 */
+        }
+
+        .kbRow>li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            float: left;
+            border-radius: 10px;
+            margin: 30px;
+            box-sizing: border-box;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="calculatorBox">
+        <div class="display">
+            <div class="dpRow dpr1"></div>
+            <div class="dpRow dpr2"></div>
+        </div>
+        <div class="keyboard">
+            <ul class="kbRow">
+                <li>m+</li>
+                <li>m-</li>
+                <li class="clear">c</li>
+                <li>del</li>
+            </ul>
+            <ul class="kbRow">
+                <li class="inputKey">1</li>
+                <li class="inputKey">2</li>
+                <li class="inputKey">3</li>
+                <li class="yunsuanfu inputKey">+</li>
+            </ul>
+            <ul class="kbRow">
+                <li class="inputKey">4</li>
+                <li class="inputKey">5</li>
+                <li class="inputKey">6</li>
+                <li class="yunsuanfu inputKey">-</li>
+            </ul>
+            <ul class="kbRow">
+                <li class="inputKey">7</li>
+                <li class="inputKey">8</li>
+                <li class="inputKey">9</li>
+                <li class="yunsuanfu inputKey">X</li>
+            </ul>
+            <ul class="kbRow">
+                <li class="inputKey">0</li>
+                <li class="inputKey">.</li>
+                <li class="dengyu">=</li>
+                <li class="yunsuanfu inputKey">/</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
